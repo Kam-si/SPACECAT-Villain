@@ -70,7 +70,7 @@ section p {
 }
 
 /* Background Images for each page */
-.home { background: url('images/home.jpg') center/cover no-repeat; }
+.index { background: url('images/home.jpg') center/cover no-repeat; }
 .speaker { background: url('images/speaker.jpg') center/cover no-repeat; }
 .purpose { background: url('images/purpose.jpg') center/cover no-repeat; }
 .audience { background: url('images/audience.jpg') center/cover no-repeat; }
@@ -115,14 +115,14 @@ section > * { position: relative; z-index: 1; }
   50% { transform: translateX(10px); }
   100% { transform: translateX(0px); }
 }
-.home {
+.index {
   background: url("Ursula.png") center/cover no-repeat; /* existing background */
   position: relative;
   overflow: hidden;
 }
 
 /* Add Ursula image as overlay behind text */
-.home::after {
+.index::after {
   content: '';
   position: absolute;
   top: 50%; /* vertical center */
@@ -137,7 +137,7 @@ section > * { position: relative; z-index: 1; }
 }
 
 /* Ensure section content stays above image */
-.home > * { position: relative; z-index: 1; }
+.index > * { position: relative; z-index: 1; }
 .center-image {
   display: block;
   margin: 30px auto;   /* centers horizontally */
