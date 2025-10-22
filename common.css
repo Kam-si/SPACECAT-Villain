@@ -146,3 +146,68 @@ section > * { position: relative; z-index: 1; }
   border-radius: 15px; /* optional rounded edges */
   box-shadow: 0 4px 12px rgba(0,0,0,0.5);
 }
+
+nav {
+  overflow-x: auto;                /* allows horizontal scrolling if nav is too wide */
+  -webkit-overflow-scrolling: touch; /* smooth scroll on iPhones */
+  white-space: nowrap;             /* keeps items in one line */
+}
+
+/* Style nav list so it wraps or scrolls nicely */
+nav ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;                 /* wraps links if needed */
+  gap: 15px;
+  padding: 0 10px;
+  overflow-x: auto;
+  scrollbar-width: none;           /* hides scrollbars on Firefox */
+}
+
+nav ul::-webkit-scrollbar {
+  display: none;                   /* hides scrollbar on Safari/iPhone */
+}
+
+/* Make nav links slightly smaller on phones */
+@media (max-width: 768px) {
+  nav ul li a {
+    font-size: 1rem;
+  }
+  nav ul {
+    flex-wrap: wrap;
+  }
+}
+
+/* Extra small phones (like iPhone SE) */
+@media (max-width: 480px) {
+  nav ul li a {
+    font-size: 0.9rem;
+    padding: 5px 8px;
+  }
+}
+
+/* Prevent hidden content under fixed nav */
+body {
+  padding-top: 90px; /* adjust if your nav is taller */
+}
+
+/* ----- RESPONSIVE CONTENT AREA ----- */
+@media (max-width: 768px) {
+  section {
+    padding: 120px 15px 60px;
+  }
+
+  section h1 {
+    font-size: 2rem;
+  }
+
+  section p {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  .center-image {
+    width: 80%;
+  }
+}
